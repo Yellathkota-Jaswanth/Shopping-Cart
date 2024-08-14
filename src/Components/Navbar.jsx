@@ -13,14 +13,19 @@ const Navbar=()=>{
 
     }
 
-    const cartValue=useContext(cartContext)
+    //const cartValue=useContext(cartContext)
+    const {cartUseCxt}=useContext(cartContext)
+    //console.log(cartValue)
+
+    
+
 
     return(
         <>
         
         <div style={navStyle}>
             <div>Home</div>
-            <div><button>Cart{cartValue}</button></div>
+            <div><button>cart{cartUseCxt && cartUseCxt.length}</button></div> 
         </div>
         
         </>

@@ -3,11 +3,13 @@ import { useState } from "react"
 import Cart from "./Components/Cart"
 import Navbar from "./Components/Navbar"
 import cartContext from "./Utilities/cartContext"
+import Product from "./Components/Product"
 
 function App(){
-  const [cartUseCxt,setCartUseCxt]=useState(0)
+  const [cartUseCxt,setCartUseCxt]=useState([])
+
   return(
-    <cartContext.Provider value={[cartUseCxt,setCartUseCxt]}>
+    <cartContext.Provider value={{cartUseCxt,setCartUseCxt}}>
         <Navbar/>
 
 
@@ -23,6 +25,7 @@ function App(){
     <div className="App">
 
     <Cart/>
+    
 
     
 
